@@ -1,15 +1,15 @@
 //
-//  ViewController.m
+//  CalculatorViewController.m
 //  1_Calculator
 //
 //  Created by Zachary Fleischman on 1/14/13.
 //  Copyright (c) 2013 Zachary Fleischman. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CalculatorViewController.h"
 #import "CalculatorBrain.h"
 
-@interface ViewController ()
+@interface CalculatorViewController ()
 
 @property (nonatomic) BOOL userIsEnteringNumber;
 @property (nonatomic) BOOL userHasEnteredDecimal;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation ViewController
+@implementation CalculatorViewController
 
 @synthesize display = _display, operationsDisplay = _operationsDisplay;
 @synthesize userIsEnteringNumber = _userIsEnteringNumber;
