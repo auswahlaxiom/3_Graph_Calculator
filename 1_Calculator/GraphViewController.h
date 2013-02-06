@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "GraphView.h"
 
-@interface GraphViewController : UIViewController
+@interface GraphViewController: UIViewController
 
 @property(weak, nonatomic) IBOutlet GraphView *graphView;
+- (IBAction)pan:(UIPanGestureRecognizer *)sender;
+- (IBAction)pinch:(UIPinchGestureRecognizer *)sender;
+- (IBAction)tap:(UITapGestureRecognizer *)sender;
+@property (weak, nonatomic) IBOutlet UILabel *graphDescription;
 
 @end

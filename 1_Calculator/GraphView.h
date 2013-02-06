@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@class GraphView;
+@protocol GraphViewDataSource
+- (CGFloat)yValueForX: (CGFloat)x inView: (GraphView *)sender;
+@end
+
 @interface GraphView : UIView
+
+@property (weak, nonatomic) IBOutlet id <GraphViewDataSource> dataSource;
+
+@property (nonatomic) CGPoint graphOrigin;
+@property (nonatomic) CGFloat scale;
+
+- (void)translateOriginByPoint: (CGPoint) point;
 
 @end

@@ -399,17 +399,48 @@
                             <view contentMode="scaleToFill" id="PXd-v4-YD7" customClass="GraphView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eVy-4Q-2Cs">
+                                        <rect key="frame" x="20" y="463" width="280" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.89130434782608692" green="0.89130434782608692" blue="0.89130434782608692" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="rqE-j6-PL5" appends="YES" id="0gn-He-3ai"/>
+                                    <outletCollection property="gestureRecognizers" destination="gJX-Mv-4k9" appends="YES" id="OAe-3a-4mG"/>
+                                    <outletCollection property="gestureRecognizers" destination="Gev-ZL-8j0" appends="YES" id="bdy-dy-n7A"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Graph" id="KjH-B8-Bhr"/>
                     <connections>
+                        <outlet property="graphDescription" destination="eVy-4Q-2Cs" id="M2o-qk-67Z"/>
                         <outlet property="graphView" destination="PXd-v4-YD7" id="8ee-VJ-mcT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xHT-kf-Lcw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="gJX-Mv-4k9">
+                    <connections>
+                        <action selector="pinch:" destination="J7l-k9-a5M" id="9es-b7-xmF"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="rqE-j6-PL5">
+                    <connections>
+                        <action selector="pan:" destination="J7l-k9-a5M" id="CF2-Mi-xte"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="3" id="Gev-ZL-8j0">
+                    <connections>
+                        <action selector="tap:" destination="J7l-k9-a5M" id="xM5-Rl-N0W"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1117" y="160"/>
         </scene>
