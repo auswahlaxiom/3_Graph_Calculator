@@ -23,14 +23,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1C10A05516A4D9F6008AD1EF /* 2_Program_Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2_Program_Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C10A05516A4D9F6008AD1EF /* 3_Graph_Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3_Graph_Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C10A05916A4D9F6008AD1EF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1C10A05B16A4D9F7008AD1EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1C10A05D16A4D9F7008AD1EF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		1C10A06116A4D9F7008AD1EF /* 2_Program_Calculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "2_Program_Calculator-Info.plist"; sourceTree = "<group>"; };
+		1C10A06116A4D9F7008AD1EF /* 3_Graph_Calculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "3_Graph_Calculator-Info.plist"; sourceTree = "<group>"; };
 		1C10A06316A4D9F7008AD1EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1C10A06516A4D9F7008AD1EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1C10A06716A4D9F7008AD1EF /* 2_Program_Calculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "2_Program_Calculator-Prefix.pch"; sourceTree = "<group>"; };
+		1C10A06716A4D9F7008AD1EF /* 3_Graph_Calculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "3_Graph_Calculator-Prefix.pch"; sourceTree = "<group>"; };
 		1C10A06816A4D9F7008AD1EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1C10A06916A4D9F7008AD1EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1C10A06B16A4D9F7008AD1EF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				1C10A07C16A4DBA8008AD1EF /* calculator-1.png */,
-				1C10A05F16A4D9F7008AD1EF /* 2_Program_Calculator */,
+				1C10A05F16A4D9F7008AD1EF /* 3_Graph_Calculator */,
 				1C10A05816A4D9F6008AD1EF /* Frameworks */,
 				1C10A05616A4D9F6008AD1EF /* Products */,
 			);
@@ -71,7 +71,7 @@
 		1C10A05616A4D9F6008AD1EF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1C10A05516A4D9F6008AD1EF /* 2_Program_Calculator.app */,
+				1C10A05516A4D9F6008AD1EF /* 3_Graph_Calculator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,7 +86,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1C10A05F16A4D9F7008AD1EF /* 2_Program_Calculator */ = {
+		1C10A05F16A4D9F7008AD1EF /* 3_Graph_Calculator */ = {
 			isa = PBXGroup;
 			children = (
 				1C10A06816A4D9F7008AD1EF /* AppDelegate.h */,
@@ -98,17 +98,17 @@
 				1C10A07516A4D9F7008AD1EF /* ViewController.m */,
 				1C10A06016A4D9F7008AD1EF /* Supporting Files */,
 			);
-			name = 2_Program_Calculator;
+			name = 3_Graph_Calculator;
 			path = 1_Calculator;
 			sourceTree = "<group>";
 		};
 		1C10A06016A4D9F7008AD1EF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1C10A06116A4D9F7008AD1EF /* 2_Program_Calculator-Info.plist */,
+				1C10A06116A4D9F7008AD1EF /* 3_Graph_Calculator-Info.plist */,
 				1C10A06216A4D9F7008AD1EF /* InfoPlist.strings */,
 				1C10A06516A4D9F7008AD1EF /* main.m */,
-				1C10A06716A4D9F7008AD1EF /* 2_Program_Calculator-Prefix.pch */,
+				1C10A06716A4D9F7008AD1EF /* 3_Graph_Calculator-Prefix.pch */,
 				1C10A06B16A4D9F7008AD1EF /* Default.png */,
 				1C10A06D16A4D9F7008AD1EF /* Default@2x.png */,
 				1C10A06F16A4D9F7008AD1EF /* Default-568h@2x.png */,
@@ -119,9 +119,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1C10A05416A4D9F6008AD1EF /* 2_Program_Calculator */ = {
+		1C10A05416A4D9F6008AD1EF /* 3_Graph_Calculator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1C10A07916A4D9F7008AD1EF /* Build configuration list for PBXNativeTarget "2_Program_Calculator" */;
+			buildConfigurationList = 1C10A07916A4D9F7008AD1EF /* Build configuration list for PBXNativeTarget "3_Graph_Calculator" */;
 			buildPhases = (
 				1C10A05116A4D9F6008AD1EF /* Sources */,
 				1C10A05216A4D9F6008AD1EF /* Frameworks */,
@@ -131,9 +131,9 @@
 			);
 			dependencies = (
 			);
-			name = 2_Program_Calculator;
+			name = 3_Graph_Calculator;
 			productName = 1_Calculator;
-			productReference = 1C10A05516A4D9F6008AD1EF /* 2_Program_Calculator.app */;
+			productReference = 1C10A05516A4D9F6008AD1EF /* 3_Graph_Calculator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -145,7 +145,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Zachary Fleischman";
 			};
-			buildConfigurationList = 1C10A04F16A4D9F6008AD1EF /* Build configuration list for PBXProject "2_Program_Calculator" */;
+			buildConfigurationList = 1C10A04F16A4D9F6008AD1EF /* Build configuration list for PBXProject "3_Graph_Calculator" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -157,7 +157,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1C10A05416A4D9F6008AD1EF /* 2_Program_Calculator */,
+				1C10A05416A4D9F6008AD1EF /* 3_Graph_Calculator */,
 			);
 		};
 /* End PBXProject section */
@@ -265,10 +265,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "1_Calculator/2_Program_Calculator-Prefix.pch";
-				INFOPLIST_FILE = "1_Calculator/2_Program_Calculator-Info.plist";
+				GCC_PREFIX_HEADER = "1_Calculator/3_Graph_Calculator-Prefix.pch";
+				INFOPLIST_FILE = "1_Calculator/3_Graph_Calculator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = 2_Program_Calculator;
+				PRODUCT_NAME = 3_Graph_Calculator;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -277,10 +277,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "1_Calculator/2_Program_Calculator-Prefix.pch";
-				INFOPLIST_FILE = "1_Calculator/2_Program_Calculator-Info.plist";
+				GCC_PREFIX_HEADER = "1_Calculator/3_Graph_Calculator-Prefix.pch";
+				INFOPLIST_FILE = "1_Calculator/3_Graph_Calculator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = 2_Program_Calculator;
+				PRODUCT_NAME = 3_Graph_Calculator;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -288,7 +288,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1C10A04F16A4D9F6008AD1EF /* Build configuration list for PBXProject "2_Program_Calculator" */ = {
+		1C10A04F16A4D9F6008AD1EF /* Build configuration list for PBXProject "3_Graph_Calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1C10A07716A4D9F7008AD1EF /* Debug */,
@@ -297,7 +297,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1C10A07916A4D9F7008AD1EF /* Build configuration list for PBXNativeTarget "2_Program_Calculator" */ = {
+		1C10A07916A4D9F7008AD1EF /* Build configuration list for PBXNativeTarget "3_Graph_Calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1C10A07A16A4D9F7008AD1EF /* Debug */,

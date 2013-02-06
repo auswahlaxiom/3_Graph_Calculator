@@ -35,18 +35,7 @@
 - (void)updateOperationsDisplay {
     self.operationsDisplay.text = [CalculatorBrain descriptionOfProgram:self.brain.program];
 }
-- (void)updateVaraibleValuesDisplay {
-    NSSet *vars = [CalculatorBrain variablesUsedInProgram:self.brain.program];
-    NSMutableString *display = [[NSMutableString alloc] init];
-    for(NSString *var in vars) {
-        if([self.variableValues objectForKey:var]) {
-            [display appendString:[NSString stringWithFormat:@"%@ = %@,  ", var, [self.variableValues objectForKey:var]]];
-        } else {
-            [display appendString:[NSString stringWithFormat:@"%@ = 0,  ", var]];
-        }
-    }
-    self.variableValueDisplay.text = display;
-}
+
 - (IBAction)digitPressed:(UIButton*)sender {
     NSString *digit = [sender currentTitle];
     if(self.userIsEnteringNumber) {
@@ -64,7 +53,6 @@
     self.display.text = [NSString stringWithFormat:@"%g", result];
     self.variableValues = nil;
     [self updateOperationsDisplay];
-    [self updateVaraibleValuesDisplay];
 }
 
 - (IBAction)enterPressed {
@@ -89,7 +77,6 @@
 - (IBAction)clearPressed {
     self.display.text = @"0";
     self.operationsDisplay.text = @"";
-    self.variableValueDisplay.text = @"";
     self.userIsEnteringNumber = NO;
     self.userHasEnteredDecimal = NO;
     [self.brain clear];
@@ -108,7 +95,6 @@
         double result = [self.brain performOperation:@"+/-"];
         self.display.text = [NSString stringWithFormat:@"%g", result];
         self.variableValues = nil;
-        [self updateVaraibleValuesDisplay];
         [self updateOperationsDisplay];
     }
 }
@@ -133,7 +119,6 @@
         } else {
             result = [CalculatorBrain runProgram:self.brain.program];
         }
-        [self updateVaraibleValuesDisplay];
         self.display.text = [NSString stringWithFormat:@"%g", result];
         
     }
@@ -145,39 +130,6 @@
     }
     [self.brain pushVariable:[sender currentTitle]];
     [self updateOperationsDisplay];
-}
-
-- (IBAction)test1:(id)sender {
-    self.variableValues = [[NSDictionary alloc] initWithObjects:[NSArray arrayWithObjects:
-                                                                 [NSNumber numberWithInt:1],
-                                                                 [NSNumber numberWithInt:2],
-                                                                 [NSNumber numberWithInt:3], nil]
-                                                        forKeys:[NSArray arrayWithObjects:@"x", @"y", @"z", nil]];
-        double result;
-    if([CalculatorBrain variablesUsedInProgram:self.brain.program]) {
-        result = [CalculatorBrain runProgram:self.brain.program usingVariableValues:self.variableValues];
-    } else {
-        result = [CalculatorBrain runProgram:self.brain.program];
-    }
-    [self updateVaraibleValuesDisplay];
-    self.display.text = [NSString stringWithFormat:@"%g", result];
-}
-
-- (IBAction)test2:(id)sender {
-    self.variableValues = [[NSDictionary alloc] initWithObjects:[NSArray arrayWithObjects:
-                                                                 [NSNumber numberWithDouble:-6.1],
-                                                                 [NSNumber numberWithDouble:-6.2],
-                                                                 [NSNumber numberWithDouble:-6.3], nil]
-                                                        forKeys:[NSArray arrayWithObjects:@"x", @"y", @"z", nil]];
-
-    double result;
-    if([CalculatorBrain variablesUsedInProgram:self.brain.program]) {
-        result = [CalculatorBrain runProgram:self.brain.program usingVariableValues:self.variableValues];
-    } else {
-        result = [CalculatorBrain runProgram:self.brain.program];
-    }
-    [self updateVaraibleValuesDisplay];
-    self.display.text = [NSString stringWithFormat:@"%g", result];
 }
 
 @end

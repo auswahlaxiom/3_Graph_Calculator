@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:2_Program_Calculator.xcodeproj">
+      location = "self:3_Graph_Calculator.xcodeproj">
    </FileRef>
 </Workspace>
