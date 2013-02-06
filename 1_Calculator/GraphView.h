@@ -1,5 +1,5 @@
 //
-//  GraphViewController.h
+//  GraphView.h
 //  3_Graph_Calculator
 //
 //  Created by Zachary Fleischman on 2/5/13.
@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GraphView.h"
 
-@interface GraphViewController : UIViewController
-
-@property(weak, nonatomic) IBOutlet GraphView *graphView;
+@interface GraphView : UIView
 
 @end
