@@ -20,6 +20,15 @@
 - (void)setGraphView:(GraphView *)graphView {
     _graphView = graphView;
     self.graphView.dataSource = self;
+    NSMutableString *desc = [[CalculatorBrain descriptionOfProgram:self.program] mutableCopy];
+    int i;
+    for(i = 0; i < desc.length; i++) {
+        if([desc characterAtIndex:i] == ',') {
+            [desc deleteCharactersInRange:NSMakeRange(i, desc.length-i)];
+            break;
+        }
+    }
+    self.graphDescription.text = desc;
 }
 
 //delegate function for graph view
