@@ -16,5 +16,6 @@
 - (IBAction)pinch:(UIPinchGestureRecognizer *)sender;
 - (IBAction)tap:(UITapGestureRecognizer *)sender;
 @property (weak, nonatomic) IBOutlet UILabel *graphDescription;
+@property (strong, nonatomic) id program;
 
 @end

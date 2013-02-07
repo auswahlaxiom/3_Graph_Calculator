@@ -8,13 +8,13 @@
 
 #import "CalculatorViewController.h"
 #import "CalculatorBrain.h"
+#import "GraphViewController.h"
 
 @interface CalculatorViewController ()
 
 @property (nonatomic) BOOL userIsEnteringNumber;
 @property (nonatomic) BOOL userHasEnteredDecimal;
 @property (nonatomic, strong) CalculatorBrain *brain;
-@property (strong, nonatomic) NSDictionary *variableValues;
 
 @end
 
@@ -24,7 +24,6 @@
 @synthesize userIsEnteringNumber = _userIsEnteringNumber;
 @synthesize userHasEnteredDecimal = _userHasEnteredDecimal;
 @synthesize  brain = _brain;
-@synthesize variableValues = _variableValues;
 
 
 - (CalculatorBrain *)brain {
@@ -34,6 +33,13 @@
 
 - (void)updateOperationsDisplay {
     self.operationsDisplay.text = [CalculatorBrain descriptionOfProgram:self.brain.program];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"ShowGraph"]) {
+        GraphViewController *target = segue.destinationViewController;
+        target.program = self.brain.program;
+    }
 }
 
 - (IBAction)digitPressed:(UIButton*)sender {
@@ -51,7 +57,6 @@
     double result = [self.brain performOperation:sender.currentTitle];
     
     self.display.text = [NSString stringWithFormat:@"%g", result];
-    self.variableValues = nil;
     [self updateOperationsDisplay];
 }
 
@@ -94,7 +99,6 @@
     } else {
         double result = [self.brain performOperation:@"+/-"];
         self.display.text = [NSString stringWithFormat:@"%g", result];
-        self.variableValues = nil;
         [self updateOperationsDisplay];
     }
 }
@@ -111,14 +115,12 @@
         }
         self.display.text = num;
     } else {
-        [self.brain undo];
+        [self.brain undo]; 
         [self updateOperationsDisplay];
         double result;
-        if([CalculatorBrain variablesUsedInProgram:self.brain.program]) {
-            result = [CalculatorBrain runProgram:self.brain.program usingVariableValues:self.variableValues];
-        } else {
-            result = [CalculatorBrain runProgram:self.brain.program];
-        }
+        
+        result = [CalculatorBrain runProgram:self.brain.program];
+
         self.display.text = [NSString stringWithFormat:@"%g", result];
         
     }

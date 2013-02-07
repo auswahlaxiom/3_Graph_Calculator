@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class GraphView;
+@class GraphView; //forward reference so the protocal knows what a graph view is
 @protocol GraphViewDataSource
 - (CGFloat)yValueForX: (CGFloat)x inView: (GraphView *)sender;
 @end

@@ -7,26 +7,34 @@
 //
 
 #import "GraphViewController.h"
+#import "CalculatorBrain.h"
 
 @interface GraphViewController () <GraphViewDataSource>
 
 @end
 
 @implementation GraphViewController
+
+@synthesize program = _program;
+
 - (void)setGraphView:(GraphView *)graphView {
     _graphView = graphView;
     self.graphView.dataSource = self;
 }
 
+//delegate function for graph view
 - (CGFloat)yValueForX:(CGFloat)x inView:(GraphView *)sender {
     CGFloat realX = (x - sender.graphOrigin.x) / sender.scale;
     
-    CGFloat realY = realX * (realX + 1) * (realX - 1) * (realX + 2) * (realX - 2);
+    CGFloat realY = [CalculatorBrain runProgram:self.program
+                            usingVariableValues:[NSDictionary dictionaryWithObject:
+                                                 [NSNumber numberWithFloat:realX] forKey:@"x"]];
     
     CGFloat y = (realY * -1.0 * sender.scale + sender.graphOrigin.y);
     return y;
 }
 
+//handle the three gestures of graph view
 - (IBAction)pan:(UIPanGestureRecognizer *)sender {
     if ((sender.state == UIGestureRecognizerStateChanged) ||
         (sender.state == UIGestureRecognizerStateEnded)) {

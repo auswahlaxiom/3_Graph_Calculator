@@ -155,7 +155,8 @@
     }
     NSMutableString *section = [[NSMutableString alloc] init];
     section = [[self popStringDescriptionOffStack:stack intoString:section] mutableCopy];
-    if([section characterAtIndex:0] == '(' && [section characterAtIndex:[section length]-1] == ')' ) {
+    if([section characterAtIndex:0] == '(' && [section characterAtIndex:[section length]-1] == ')'
+       && [section characterAtIndex:1] == '(' && [section characterAtIndex:[section length]-2] == ')') {
         [section deleteCharactersInRange:NSMakeRange(0, 1)];
         [section deleteCharactersInRange:NSMakeRange([section length]-1, 1)];
     }
@@ -163,7 +164,8 @@
     while(stack.lastObject) {
         [description appendString:@", "];
         NSMutableString *section = [[self popStringDescriptionOffStack:stack intoString:section] mutableCopy];
-        if([section characterAtIndex:0] == '(' && [section characterAtIndex:[section length]-1] == ')' ) {
+        if([section characterAtIndex:0] == '(' && [section characterAtIndex:[section length]-1] == ')'
+           && [section characterAtIndex:1] == '(' && [section characterAtIndex:[section length]-2] == ')' ) {
             [section deleteCharactersInRange:NSMakeRange(0, 1)];
             [section deleteCharactersInRange:NSMakeRange([section length]-1, 1)];
         }

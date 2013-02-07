@@ -63,12 +63,16 @@
 
     CGContextRef context = UIGraphicsGetCurrentContext();
     
+    //I reallllllyyyyy HATE all this graphics bullshit with context and push and begin path and stroke. It's way more complicated than it needs to be.
+    
+    //seed the loop with the first point
     UIGraphicsPushContext(context);
     CGContextBeginPath(context);
     CGPoint point = CGPointMake(0, [self.dataSource yValueForX:0 inView:self]);
     CGContextMoveToPoint(context, point.x, point.y);
     
-    for(CGFloat x = 1; x < self.bounds.size.width * self.contentScaleFactor; x += (1.0/self.contentScaleFactor)) {
+    //for every pixel across the width, find the Y pixel that it should be, and draw a line to it
+    for(CGFloat x = 1.0/self.contentScaleFactor; x < self.bounds.size.width * self.contentScaleFactor; x += (1.0/self.contentScaleFactor)) {
         point = CGPointMake(x, [self.dataSource yValueForX:x inView:self]);
         CGContextAddLineToPoint(context, point.x, point.y);
         CGContextStrokePath(context);
@@ -84,6 +88,7 @@
     [AxesDrawer drawAxesInRect:self.bounds originAtPoint:self.graphOrigin scale:self.scale];
 }
 
+//it is really stupid that you can't just modify the point.x directly
 - (void)translateOriginByPoint: (CGPoint) point {
     
     self.graphOrigin = CGPointMake(point.x + self.graphOrigin.x, point.y + self.graphOrigin.y);
