@@ -23,6 +23,7 @@
 		1CD0149F16C2206C0039364E /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD0149E16C2206C0039364E /* GraphViewController.m */; };
 		1CD014A316C223030039364E /* AxesDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD014A116C223030039364E /* AxesDrawer.m */; };
 		1CD014A816C2242C0039364E /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD014A716C2242C0039364E /* GraphView.m */; };
+		1CD014AA16C4B4E60039364E /* iPadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CD014A916C4B4E60039364E /* iPadStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		1CD014A216C223030039364E /* AxesDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AxesDrawer.h; sourceTree = "<group>"; };
 		1CD014A616C2242C0039364E /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
 		1CD014A716C2242C0039364E /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
+		1CD014A916C4B4E60039364E /* iPadStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPadStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				1C10A06816A4D9F7008AD1EF /* AppDelegate.h */,
 				1C10A06916A4D9F7008AD1EF /* AppDelegate.m */,
 				1C10A07116A4D9F7008AD1EF /* MainStoryboard.storyboard */,
+				1CD014A916C4B4E60039364E /* iPadStoryboard.storyboard */,
 				1CD014A416C223130039364E /* Graph */,
 				1CD014A516C2231B0039364E /* Calculator */,
 				1C10A06016A4D9F7008AD1EF /* Supporting Files */,
@@ -204,6 +207,7 @@
 				1C10A07016A4D9F7008AD1EF /* Default-568h@2x.png in Resources */,
 				1C10A07316A4D9F7008AD1EF /* MainStoryboard.storyboard in Resources */,
 				1C10A07D16A4DBA8008AD1EF /* calculator-1.png in Resources */,
+				1CD014AA16C4B4E60039364E /* iPadStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +307,7 @@
 				INFOPLIST_FILE = "1_Calculator/3_Graph_Calculator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = 3_Graph_Calculator;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -315,6 +320,7 @@
 				INFOPLIST_FILE = "1_Calculator/3_Graph_Calculator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = 3_Graph_Calculator;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

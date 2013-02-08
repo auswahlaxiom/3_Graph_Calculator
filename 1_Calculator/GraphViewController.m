@@ -9,7 +9,7 @@
 #import "GraphViewController.h"
 #import "CalculatorBrain.h"
 
-@interface GraphViewController () <GraphViewDataSource>
+@interface GraphViewController () <GraphViewDataSource, UISplitViewControllerDelegate>
 
 @end
 
@@ -81,5 +81,14 @@
         [[NSUserDefaults standardUserDefaults] setFloat:self.graphView.graphOrigin.x forKey:@"OriginX"];
         [[NSUserDefaults standardUserDefaults] setFloat:self.graphView.graphOrigin.y forKey:@"OriginY"];
     }
+}
+
+//split view delegate functions
+- (void)splitViewController:(UISplitViewController *)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)pc {
+    //herp derp
+}
+
+- (void)splitViewController:(UISplitViewController *)svc popoverController:(UIPopoverController *)pc willPresentViewController:(UIViewController *)aViewController {
+    //bluh bluh
 }
 @end
